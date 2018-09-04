@@ -8,15 +8,20 @@
 </head>
 <body>
     @*<partial name="_CookieConsentPartial" />*@
+    <partial name="_Header" />
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Experiments</p>
-        </footer>
-    </div>
+<main role="main" class="container">
+    @RenderBody()
 
+</main>
+<hr />
+<footer>
+    <p>&copy; 2018 - Experiments</p>
+</footer>
+
+<environment names="Development">
+    <script src="~/dist/main.js"></script>
+</environment>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
