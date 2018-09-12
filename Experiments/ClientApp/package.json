@@ -11,5 +11,8 @@
         "webpack-cli": "^3.1.0",
         "webpack-dev-middleware": "^3.3.0",
         "webpack-hot-middleware": "^2.23.1"
+    },
+    "dependencies": {
+        "mini-css-extract-plugin": "^0.4.2"
     }
 }
