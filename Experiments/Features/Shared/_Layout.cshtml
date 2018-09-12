@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - Experiments</title>
 </head>
 <body>
-@*    <partial name="_CookieConsentPartial" />*@
+    @*    <partial name="_CookieConsentPartial" />*@
 
     <div class="container body-content">
         @RenderBody()
@@ -15,6 +15,13 @@
             <p>&copy; 2018 - Experiments</p>
         </footer>
     </div>
-    @RenderSection("Scripts", required: false)
+    <environment name="development">
+        <script src="~/dist/main.js"></script>
+    </environment>
+    <environment name="Staging, Production">
+        <script src="~/dist/main.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", false)
 </body>
 </html>
