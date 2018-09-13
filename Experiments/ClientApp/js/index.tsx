@@ -1,9 +1,9 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import App from "./index/App";
+import MyUsers from './index/myUsers';
 
 ReactDOM.render(
-	<App />,
+	<MyUsers />,
 	document.getElementById('index-app')
 );

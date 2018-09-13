@@ -8,7 +8,7 @@
 
     <ItemGroup>
       <None Remove="ClientApp\js\index.tsx" />
-      <None Remove="ClientApp\js\index\App.tsx" />
+      <None Remove="ClientApp\js\index\MyUsers.tsx" />
     </ItemGroup>
 
     <ItemGroup>
@@ -18,7 +18,7 @@
 
     <ItemGroup>
       <TypeScriptCompile Include="ClientApp\js\index.tsx" />
-      <TypeScriptCompile Include="ClientApp\js\index\App.tsx" />
+      <TypeScriptCompile Include="ClientApp\js\index\myUsers.tsx" />
     </ItemGroup>
     <Target Name="EnsureNodeModules" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(ClientAppFolder)\node_modules') ">
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
