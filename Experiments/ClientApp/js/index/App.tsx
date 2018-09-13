@@ -1,9 +1,14 @@
 ﻿import * as React from 'react';
 
-const App = () => {
-	return (
-		<h1>This is rendered using React</h1>
-	);
-};
-
-export default App;
+export default class MyUsers extends React.Component<any, any> {
+    public render() {
+        return (
+            <div>
+                <h1>My Users</h1>
+                <div>
+                    Each row to go here...
+                </div>
+            </div>
+        );
+    }
+}
