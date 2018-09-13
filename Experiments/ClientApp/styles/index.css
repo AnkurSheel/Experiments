@@ -1,0 +1,21 @@
+﻿.user-list {
+     width: 600px;
+}
+
+.avatar {
+     max-width: 100px
+}
+
+.name {
+    max-width: 600px;
+    padding-left: 10px;
+}
+
+.summary {
+    max-width: 600px;
+    padding-left: 10px;
+}
+
+.actions {
+     max-width: 100px;
+}
