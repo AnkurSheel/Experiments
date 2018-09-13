@@ -3,11 +3,22 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <ClientAppFolder>ClientApp</ClientAppFolder>
+        <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="ClientApp\js\index.tsx" />
+      <None Remove="ClientApp\js\index\App.tsx" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
         <PackageReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\js\index.tsx" />
+      <TypeScriptCompile Include="ClientApp\js\index\App.tsx" />
     </ItemGroup>
     <Target Name="EnsureNodeModules" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(ClientAppFolder)\node_modules') ">
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />

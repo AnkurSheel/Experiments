@@ -1,5 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
-Home Page
+<div id="index-app"></div>
+
+@section scripts {
+	<environment names="Development">
+		<script src="~/dist/index.js"></script>
+	</environment>
+	<environment names="Staging, Production">
+		<script src="~/dist/index.js" asp-append-version="true"></script>
+	</environment>
+}
