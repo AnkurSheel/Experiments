@@ -2,9 +2,9 @@
 import * as ReactDOM from 'react-dom';
 
 import MyUsers from './index/myUsers';
-import '../styles/index.css';
+import '../styles/user.css';
 
 ReactDOM.render(
 	<MyUsers />,
-	document.getElementById('index-app')
+	document.getElementById('container')
 );
