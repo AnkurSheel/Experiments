@@ -34,11 +34,7 @@ export default class MyUsers extends React.Component<any, IState> {
             <div>
                 <h1>My Users</h1>
                 {this.state.loading && <div> Loading...</div>}
-                <table className="user-list">
-                    <tbody>
-                    {this.state.users.map(user => <UserRow key={user.id} user={user}/>)}
-                    </tbody>
-                </table>
+                {this.state.users.map(user => <UserRow key={user.id} user={user}/>)}
             </div>
         );
     }

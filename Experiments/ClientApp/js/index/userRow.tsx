@@ -4,11 +4,13 @@ export default class UserRow extends React.Component<any, any> {
 
     public render() {
         return (
-            <tr>
-                <td className="name">{this.props.user.name}</td>
-                <td className="company">{this.props.user.company}</td>
-                <td className="summary">{this.props.user.summary}</td>
-            </tr>
+            <div className="columns">
+                <div className="panel">
+                    <div>{this.props.user.name}</div>
+                    <div>{this.props.user.company}</div>
+                    <div>{this.props.user.summary}</div>
+                </div>
+            </div>
         );
     }
 }

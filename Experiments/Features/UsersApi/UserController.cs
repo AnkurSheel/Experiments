@@ -21,17 +21,31 @@ namespace Experiments.Features.UsersApi
                 new User
                 {
                     Id = 1,
-                    Name = "Ankur",
-                    Company = "Awesome Company",
+                    Name = "User1",
+                    Company = "Company 1",
                     Summary = "36 / Lead Developer"
                 },
                 new User
                 {
                     Id = 2,
-                    Name = "Sheel ",
-                    Company = "New Company",
-                    Summary = "32 / Senior Engineer"
-                }
+                    Name = "User2",
+                    Company = "Company 2",
+                    Summary = "36 /  Developer"
+                },
+                new User
+                {
+                    Id = 3,
+                    Name = "User3",
+                    Company = "Company 3",
+                    Summary = "36 / Lead Developer"
+                },
+                new User
+                {
+                    Id = 4,
+                    Name = "User5",
+                    Company = "Company 4",
+                    Summary = "36 / Developer"
+                },
             };
 
             await Task.Delay(1000);
