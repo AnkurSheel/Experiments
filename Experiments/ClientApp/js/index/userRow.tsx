@@ -1,14 +1,14 @@
-﻿import * as React from 'react'
+﻿import * as React from 'react';
 
-function userRow() {
-    return (
-        <tr>
-            <td className="avatar">Avatar</td>
-            <td className="name">FirstName LastName</td>
-            <td className="summary">Summary</td>
-            <td className="actions">Buttons</td>
-        </tr>
-    );
+export default class UserRow extends React.Component<any, any> {
+
+    public render() {
+        return (
+            <tr>
+                <td className="name">{this.props.user.name}</td>
+                <td className="company">{this.props.user.company}</td>
+                <td className="summary">{this.props.user.summary}</td>
+            </tr>
+        );
+    }
 }
-
-export default userRow;
