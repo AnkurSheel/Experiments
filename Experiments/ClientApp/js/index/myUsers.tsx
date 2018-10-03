@@ -1,13 +1,8 @@
 ﻿import * as React from 'react';
+import * as UserData from './userData';
 
 import UserRow from './userRow'
-
-export interface IUsers {
-    id: number,
-    name: string,
-    company: string,
-    summary: string;
-}
+import IUsers = UserData.IUsers;
 
 export interface IState {
     loading: boolean;
@@ -23,7 +18,7 @@ export default class MyUsers extends React.Component<any, IState> {
     };
 
     public async componentDidMount() {
-        this.setState({loading:true});
+        this.setState({ loading: true });
         const result = await fetch('https://localhost:44338/user');
         const users = await result.json();
         this.setState({ users, loading: false });

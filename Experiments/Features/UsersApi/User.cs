@@ -11,5 +11,7 @@ namespace Experiments.Features.UsersApi
         public string Company { get; set; }
 
         public string Summary { get; set; }
+
+        public string Description { get; set; }
     }
 }
