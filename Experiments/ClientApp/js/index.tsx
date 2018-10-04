@@ -2,7 +2,7 @@
 import * as ReactDOM from 'react-dom';
 
 import MyUsers from './index/myUsers';
-import '../styles/user.css';
+import '../styles/card.css';
 
 ReactDOM.render(
 	<MyUsers />,
