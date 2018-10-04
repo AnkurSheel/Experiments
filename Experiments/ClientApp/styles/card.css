@@ -25,6 +25,7 @@
     transition: transform 3s;
     transform-style: preserve-3d;
     background: blanchedalmond;
+    transform-origin: center right;
 }
 
 .card .face {
@@ -42,5 +43,5 @@
 }
 
 .card.content.is-flipped {
-    transform: rotateY(180deg);
+    transform: translateX(-100%) rotateY(-180deg);
 }
