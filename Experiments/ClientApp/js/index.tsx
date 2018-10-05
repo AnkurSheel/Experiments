@@ -1,9 +1,10 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import App from "./index/App";
+import MyUsers from './index/myUsers';
+import '../styles/card.css';
 
 ReactDOM.render(
-	<App />,
-	document.getElementById('index-app')
+	<MyUsers />,
+	document.getElementById('container')
 );

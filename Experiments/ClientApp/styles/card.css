@@ -1,0 +1,35 @@
+﻿.card {
+    border-radius: 5%;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+    height: 300px;
+    perspective: 600px;
+    width: 100%;
+}
+
+.card .content {
+    background: blanchedalmond;
+    border-radius: inherit;
+    height: 100%;
+    position: relative;
+    transform-origin: center right;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+    width: 100%;
+}
+
+.card .face {
+    backface-visibility: hidden;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.card .face.back {
+    overflow: auto;
+    transform: rotateY(180deg);
+}
+
+.content.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
