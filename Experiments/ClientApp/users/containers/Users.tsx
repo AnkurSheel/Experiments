@@ -1,8 +1,7 @@
 ﻿import * as React from 'react';
-import * as UserData from './userData';
 
-import UserRow from './userRow'
-import IUsers = UserData.IUsers;
+import UserRow from '../components/userRow';
+import { IUsers } from '../components/userData';
 
 export interface IState {
     loading: boolean;

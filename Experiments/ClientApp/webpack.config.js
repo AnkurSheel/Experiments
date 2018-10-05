@@ -8,8 +8,8 @@ module.exports = (env = {}, argv = {}) => {
 	const config = {
 		mode: argv.mode || 'development', // we default to development when no 'mode' arg is passed
 		entry: {
-			main: './js/main.js',
-			index: './js/index.tsx'
+			main: './main.js',
+			index: './index.tsx'
 		},
 		output: {
 			filename: '[name].js',
@@ -22,7 +22,7 @@ module.exports = (env = {}, argv = {}) => {
 		},
 		plugins: [
 			new MiniCssExtractPlugin({
-				filename: 'styles.css'
+				filename: '[name].css'
 			})
 		],
 		module: {
