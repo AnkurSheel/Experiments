@@ -13,20 +13,20 @@ export default class CardFaceFront extends React.Component<ICardFaceFrontProps, 
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(e) {
-        this.props.onClicked();
-    }
-
     public render() {
         return (
-            <div className="face front">
+            <div className='face front'>
                 <div>{this.props.user.name}</div>
                 <div>{this.props.user.summary}</div>
                 <div>{this.props.user.company}</div>
                 <div>
-                    <a href="#" onClick={this.props.onClicked}>More Details</a>
+                    <a href='#' onClick={this.props.onClicked}>More Details</a>
                 </div>
             </div>
         );
+    }
+
+    private handleClick(e) {
+        this.props.onClicked();
     }
 }
