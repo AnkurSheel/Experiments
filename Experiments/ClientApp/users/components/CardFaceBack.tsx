@@ -9,10 +9,10 @@ export default class CardFaceBack extends React.Component<ICardFaceBackProps, an
 
     public render() {
         return (
-            <div className="face back">
+            <div className='face back'>
                 <div>{this.props.description}</div>
                 <div>
-                    <a href="#" onClick={this.props.onClicked}>Back</a>
+                    <a href='#' onClick={this.props.onClicked}>Back</a>
                 </div>
             </div>
         );

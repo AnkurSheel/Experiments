@@ -1,6 +1,6 @@
 import * as React from 'react';
-import CardFaceFront from './CardFaceFront';
 import CardFaceBack from './CardFaceBack';
+import CardFaceFront from './CardFaceFront';
 import { IUsers } from './userData';
 
 export default class Card extends React.Component<{ user: IUsers }, any> {
@@ -9,13 +9,6 @@ export default class Card extends React.Component<{ user: IUsers }, any> {
         super(props);
         this.state = { flipped: false };
         this.eventHandler = this.eventHandler.bind(this);
-    }
-
-    eventHandler() {
-        this.setState((prevState) => ({
-                flipped: !prevState.flipped
-            })
-        );
     }
 
     public render() {
@@ -30,6 +23,13 @@ export default class Card extends React.Component<{ user: IUsers }, any> {
                     <CardFaceBack description={this.props.user.description} onClicked={this.eventHandler}/>
                 </div>
             </div>
+        );
+    }
+
+    private eventHandler() {
+        this.setState((prevState) => ({
+                flipped: !prevState.flipped,
+            }),
         );
     }
 }

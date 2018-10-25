@@ -1,19 +1,18 @@
-﻿import * as React from 'react';
+import * as React from 'react';
 
-import UserRow from '../components/userRow';
 import { IUsers } from '../components/userData';
+import UserRow from '../components/userRow';
 
 export interface IState {
     loading: boolean;
     users: IUsers[];
 }
 
-
 export default class MyUsers extends React.Component<any, IState> {
 
     public state: IState = {
         loading: false,
-        "users": []
+        users: [],
     };
 
     public async componentDidMount() {
@@ -28,7 +27,7 @@ export default class MyUsers extends React.Component<any, IState> {
             <div>
                 <h1>My Users</h1>
                 {this.state.loading && <div> Loading...</div>}
-                {this.state.users.map(user => <UserRow key={user.id} user={user}/>)}
+                {this.state.users.map((user) => <UserRow key={user.id} user={user}/>)}
             </div>
         );
     }
